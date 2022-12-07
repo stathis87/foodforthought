@@ -14,11 +14,17 @@ function newConnection(socket) {
     console.log('new connection: ' + socket.id);
 
 function sendText (data) {
-    socket.broadcast.emit("textA", data);
+    socket.broadcast.emit("message", data);
     console.log(data);
-}
-}
-socket.on
+}};
+
+
+//socket.on
+
+//runs when client disconnects
+// socket.on('disconnect', () => {
+//     io.emit('message', 'the user left');
+// }) ;
 
 console.log("my socket server is running");
 

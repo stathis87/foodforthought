@@ -1,3 +1,6 @@
+//const { text } = require("express");
+
+
 // WorkFlow
 let socket;
 let myData = []; 
@@ -24,10 +27,15 @@ function preload() {
   // img = loadImage("kiko.jpg");
 }
 
+
+
 function setup() {
   createCanvas(img.width, img.height);
 
-  socket = io.connect('http://localhost:5000')
+socket = io.connect('http://localhost:5000')
+
+   //socket.on(input, newInput);
+
 
   select = createSelect();
   button = createButton("insert");
@@ -61,6 +69,10 @@ function setup() {
 }
 
 
+//from sockets?
+function newInput(data) {
+  text(input, 100, 100)
+}
 
 function draw() {
   background(0);
@@ -90,7 +102,7 @@ function draw() {
     showDots[i].animate();
   }
 
-  print(showDots);
+  //print(showDots);
 }
 
 // function dotter(x, y) {

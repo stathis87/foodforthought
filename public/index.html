@@ -7,28 +7,9 @@
   <script src="/socket.io/socket.io.js"></script>
   <script>
   
-  //let ws = new WebSocket('ws://127.0.0.1:3000/index-2.html');
+
+
   
-  // let socket = io();
-
-  // var form = document.getElementById('form');
-  // var input = document.getElementById('input');
-
-  // form.addEventListener('submit', function(e) {
-  //   e.preventDefault();
-  //   if (input.value) {
-  //     socket.emit('ingredient', input.value);
-  //     input.value = '';
-  //   }
-  // });
-
-  //   ws.send('ingredient');
-
-  let data = {
-    text("word", 100, 100);
-  }
-
-  socket.emit('textA'. data);
 
   </script>
 
@@ -74,21 +55,23 @@
 
       <form
         action=""
-        id = "form"
+        id = "myform"
       >
-        <label>
+        
           <input 
-          id = "input"
+          id = "msg"
           autocomplete="off" 
           />
-        </label>
+        
         
 
-        <button type="submit">submit</button>
+        <button type="submit" id="btn-submit">submit</button>
       </form>
 
 
 
   </section>
+
+  <script src="main.js"></script>
 
 </body>

@@ -4,13 +4,6 @@ socket = io();
   // Get the input field
 let myForm = document.getElementById('myform');
 
-//let inputValue = myInput.value
-    
-  //var inputstring = Sting(input);
-  //var inpstr = value.toString(input);
-
-  
-
 //   // Execute a function when the user presses a key on the keyboard
 //   document.addEventListener("keypress", function(event) {
 //     // If the user presses the "Enter" key on the keyboard
@@ -27,10 +20,6 @@ let myForm = document.getElementById('myform');
     console.log(message);
   });
 
- 
-  //socket.emit('myinput', 'test message');
-
-
   // Message submit
 myForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -38,23 +27,19 @@ myForm.addEventListener('submit', (e) => {
     // Get message text
     let msg = e.target.elements.msg.value;
 
-
-    //console.log(msg);
-
     //emit the ingredient to the server
     socket.emit('ingredient', msg)
   
-    // msg = msg.trim();
+    msg = msg.trim();
   
-    // if (!msg) {
-    //   return false;
-    // }
+    if (!msg) {
+      return false;
+    }
   
     // Emit message to server
-    //socket.emit('ingredient', msg);
     console.log('sending: ' + msg);
   
     // Clear input
-    // e.target.elements.msg.value = '';
-    // e.target.elements.msg.focus();
+    e.target.elements.msg.value = '';
+    e.target.elements.msg.focus();
   });

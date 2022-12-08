@@ -209,13 +209,6 @@ footer {
 	align-items: center;
 }
 
-footer p {
-	/* float: left; */
-	}
-
-footer nav {
-	/* float: right; */
-	}
 
 footer nav a {
 	width: 16px;
@@ -286,7 +279,7 @@ footer nav a {
 
 }
 
-@@media (max-width: 680px) {
+@media (max-width: 680px) {
 
 	.contact {
 		padding: 0 30px;
@@ -294,8 +287,6 @@ footer nav a {
 
 }
 
-	@media (max-width: 450px) {
-		.photos {
-			/* justify-content: center; */
-		}
-	}
+	/* @media (max-width: 450px) {
+		
+	} */

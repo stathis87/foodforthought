@@ -2,7 +2,6 @@ socket = io();
 
 
   // Get the input field
-//let myInput = document.getElementById('myinput');
 let myForm = document.getElementById('myform');
 
 //let inputValue = myInput.value
@@ -52,8 +51,8 @@ myForm.addEventListener('submit', (e) => {
     // }
   
     // Emit message to server
-    socket.emit('Message', msg);
-    console.log(msg);
+    //socket.emit('ingredient', msg);
+    console.log('sending: ' + msg);
   
     // Clear input
     // e.target.elements.msg.value = '';

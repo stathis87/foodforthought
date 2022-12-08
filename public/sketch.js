@@ -1,6 +1,3 @@
-//const { text } = require("express");
-
-
 // WorkFlow
 let socket;
 let myData = []; 
@@ -18,6 +15,8 @@ let remover;
 let img;
 var size = 10;
 
+socket = io();
+
 function preload() {
   loadJSON('data.json', function(data) {
     myData = data;
@@ -32,9 +31,8 @@ function preload() {
 function setup() {
   createCanvas(img.width, img.height);
 
-socket = io.connect('http://localhost:5000')
-
-   //socket.on(input, newInput);
+  //socket = io.connect('http://localhost:5500')
+  socket.on('ingredient', newMsg);
 
 
   select = createSelect();
@@ -45,6 +43,10 @@ socket = io.connect('http://localhost:5000')
     ingredients.push(myData[i][1]);
     carbon.push(myData[i][2]);
     water.push(myData[i][3]);
+  }
+
+  function newMsg(data) {
+    console.log(data);
   }
 
 

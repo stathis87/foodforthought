@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 //we are adding the server name we want our app to look for 
-const server = app.listen(5000);
+const server = app.listen(5500);
 const socket = require('socket.io');
 //we are hosting the static files in public directory
 app.use(express.static('public'));
@@ -13,10 +13,21 @@ io.sockets.on('connection', newConnection);
 function newConnection(socket) {
     console.log('new connection: ' + socket.id);
 
-function sendText (data) {
-    socket.broadcast.emit("message", data);
+// function sendText (data) {
+//     socket.broadcast.emit("message", data);
+//     console.log(data);
+//}
+
+socket.on('ingredient', receiveMsg);
+
+function receiveMsg (data) {
+    socket.broadcast.emit('ingredient', data);
+    //if we want to send it to any client
+    //io.socket.emit('ingredient', data)
     console.log(data);
-}};
+}
+
+};
 
 
 //socket.on

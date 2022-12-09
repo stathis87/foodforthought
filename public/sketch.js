@@ -27,7 +27,7 @@ function preload() {
 
   table = loadTable('food.csv', 'csv', 'header');
 
-  img = loadImage("friedchicken.jpg");
+  img = loadImage("fruit.jpg");
   // img = loadImage("kiko.jpg");
 }
 
@@ -84,7 +84,7 @@ function setup() {
 
 
 function draw() {
-  background(0);
+  background(255);
   // button.mousePressed(sChanged);
 
  

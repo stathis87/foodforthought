@@ -34,7 +34,7 @@ function preload() {
 
 
 function setup() {
-  createCanvas(img.width, img.height);
+  createCanvas(windowWidth, windowHeight);
 
   // print(table.get(1, 0));
 

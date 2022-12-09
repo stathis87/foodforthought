@@ -1,6 +1,9 @@
 // WorkFlow
 let socket;
 let myData = []; 
+
+var table, input;
+
 let ingredients = [];
 let carbon = [];
 let water = [];
@@ -18,9 +21,11 @@ var size = 10;
 socket = io();
 
 function preload() {
-  loadJSON('data.json', function(data) {
-    myData = data;
-  });
+  // loadJSON('data.json', function(data) {
+  //   myData = data;
+  // });
+
+  table = loadTable('food.csv', 'csv', 'header');
 
   img = loadImage("friedchicken.jpg");
   // img = loadImage("kiko.jpg");
@@ -31,27 +36,33 @@ function preload() {
 function setup() {
   createCanvas(img.width, img.height);
 
+  // print(table.get(1, 0));
+
   //socket = io.connect('http://localhost:5500')
   socket.on('ingredient', newMsg);
 
 
-  select = createSelect();
-  button = createButton("insert");
+  // select = createSelect();
+  // button = createButton("insert");
 
-  for (let i = 0; i < myData.length; i++) {
-    select.option(myData[i][1]);
-    ingredients.push(myData[i][1]);
-    carbon.push(myData[i][2]);
-    water.push(myData[i][3]);
-  }
+  // for (let i = 0; i < table.getRowCount(); i++) {
+  //   select.option(table.get(i, 0));
+  //   // ingredients.push(myData[i][1]);
+  //   carbon.push(table.get(i, 1));
+  //   water.push(table.get(i, 2));
+  // }
 
   function newMsg(data) {
-    console.log(data);
+    // console.log(data);
+  //  input = String(data).toLowerCase();
+  input = String(data).toLowerCase();
+    print(String(data).toLowerCase());
+ 
+  //  print(input.toLowerCase());
   }
 
-
-
-  //select.changed(sChanged);
+  // print(String(input).toLowerCase());
+  // input.changed(selector());
   
 
   image(img, 0, 0, img.width, img.height);
@@ -59,7 +70,7 @@ function setup() {
   noStroke();
   background(0);
 
- 
+
   
   for(var x = 0; x < width; x += size) {
     for(var y = 0; y < height; y += size) {
@@ -71,31 +82,12 @@ function setup() {
 }
 
 
-//from sockets?
-function newInput(data) {
-  text(input, 100, 100)
-}
 
 function draw() {
   background(0);
-  button.mousePressed(sChanged);
-  //select.changed(selectChanged);
-
-  //console.log(ingredients.indexOf(select.value()));
-  //console.log(carbon[ingredients.indexOf(select.value())]);
-
-  //ellipse(width/2, height/2, carbon[ingredients.indexOf(select.value())] * 3, water[ingredients.indexOf(select.value())] * 3)
-
-
-  //print(select.value());
+  // button.mousePressed(sChanged);
 
  
-  
-  // print(showDots.length);
-
-  let txt = select.value();
-  text(txt);
-  
   let randomPicker = random(dots);
  
   showDots.push(randomPicker);
@@ -104,22 +96,10 @@ function draw() {
     showDots[i].animate();
   }
 
-  //print(showDots);
+  selector();
+  // print(input);
 }
 
-// function dotter(x, y) {
-//     var index = (x + (y * width)) * 4;
-//     var r = pixels[index];
-//     var g = pixels[index+1];
-//     var b = pixels[index+2];
-//     var a = pixels[index+3]; // CHANGE TO LERP IN;
-//     var col = color(r, g, b, a);
-//     var light = lightness(col);
-//     var radius = map(light, 0, 100, size, 3);
-    
-//     fill(r, g, b, a);
-//     ellipse(x, y, radius);
-// }
 
 class dot {
   constructor(x ,y) {
@@ -150,7 +130,7 @@ class dot {
 }
 
 function sChanged() {
-  picker = carbon[ingredients.indexOf(select.value())] + water[ingredients.indexOf(select.value())];
+  // picker = carbon[ingredients.indexOf(select.value())] + water[ingredients.indexOf(select.value())];
   // picker = 1;
   
 
@@ -187,5 +167,37 @@ function selectChanged() {
       text("fantasy");
       break;
   }
+
+}
+
+
+function selector() {
+  picker = 0;
+  
+
+ 
+  for (let i = 0; i < table.getRowCount(); i++) {
+    let checker = table.get(i, 0).toString().toLowerCase();
+    // print(seer);
+    if (input == checker) {
+      
+      picker = round(table.get(i, 1)) + round(table.get(i, 2));
+      
+
+      for (let i = 0; i <= picker; i++) {
+        let randomRemover = random(showDots);
+        let d = new dot(randomRemover.x, randomRemover.y);
+        showDots.splice(randomRemover, 1);
+    
+        showDots.push(d);
+        
+      }
+      print(picker);
+      picker = 0;
+      input = null;
+    } 
+    
+  }
+
 
 }

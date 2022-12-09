@@ -1,193 +1,193 @@
-﻿Ingridient;Emissions CO2 (per Kg);Water footprint (litres per kg)
-Beef;68,8;15.415
-Mutton;64,2;5.301
-Goat;64,2;8.763
-Offals;35,9;8.763
-Coffee;10,1;18.925
-Pork;7,9;5.988
-Chicken;5,4;4.325
-Turkey;5,4;4325
-Squid;5,4;0
-Octapus;5,4;0
-Calamari;5,4;0
-Crab;5,4;0
-Lobster;5,4;0
-Shrimp;5,4;0
-Demersal Fish;5,4;0
-Fish;5,4;0
-Seeafood;5,4;0
-Cod;5,4;0
-Sea Bass;5,4;0
-Sea beam;5,4;0
-Red scarlet;5,4;0
-Eggs;4,9;3.265
-Olive Oil;4,5;14726
-Olives;4,5;3015
-Seasame Seeds;4,2;9371
-Seasame Oil;4,2;21793
-Rice;3,9;2172
-Barley;3,8;1423
-Beer;3,8;298
-Purses;3,8;300
-Legumes;3,5;300
-includes alfalfa;3,5;300
-clover;3,5;300
-lupins;3,5;300
-mesquite;3,5;300
-carob;3,5;5594
-tamarind;3,5;300
-Beverages;3,5;300
-Cocoa Beans;3,4;15636
-Palm Oil;3,3;4971
-Purlses;3,3;300
-Sunflower Oil;3,3;6792
-Pomento;3,2;300
-Vegetable Oil;3,2;300
-Rape Oil;2,9;300
-Mustard Oil;2,9;300
-Rape seeds;2,9;300
-Mustard Seeds;2,9;2809
-Pepper;2,5;300
-Fermented Beverages;2,4;300
-Cream;2,4;300
-Oil crops;2,4;2.364
-Coconut Oil;2,1;4490
-Coconuts;2,1;2687
-Soyabeans;2;2145
-Cashews;2;14218
-Walnuts;2;5293
-Nuts;2;9.063
-Pinapple;1,9;255
-Tea;1,9;300
-Milk;1,8;1.020
-Butter;1,8;5.553
-Ghee;1,8;300
-Cereals;1,8;1.644
-Soyabean Oil;1,8;2145
-Plantains;1,6;1602
-Spices;1,6;300
-Vegetables;;300
-Tomatos;1,5;214
-Groundnuts;1,4;300
-Bananas;1,4;790
-Peas;1,2;595
-Dates;1,1;2277
-Honey;1;0
-Oat;1;1788
-Rye;1;1544
-Wheat;1;1827
-Wine;1;300
-Fruits;1;967
-Ground Oil;1;300
-Beans;0,8;5053
-Grapefruit;0,8;506
-Grapes;0,8;608
-Apple;0,7;822
-Maize;0,7;300
-Citrus;0,7;300
-Lemons;0,6;642
-Limes;0,6;642
-Orange;0,6;560
-Mandarin;0,6;748
-Onion;0,5;272
-Maize germ oil;0,4;300
-Potato;0,4;287
-Starchy roots;0,4;300
-Parsnips;0,4;300
-Turnips;0,4;195
-Jicama;0,4;300
-Sugar;0,1;210
-Aquatic plants ;0;300
-Mollusks;0;300
-Local apple;0,55;300
-Asparagus;7,6;2150
-Local asparagus;0,5;2150
-Carrots;0,3;195
-Local Carrots;0,25;195
-Baby Carrots ;1;195
-Cheese;12;1411
-Cod;2,8;0
-Cod;3,2;0
-Fish general;2,6;0
-Fish Filleted;6,5;0
-Herring;1,3;300
-Lamp leg;19;5301
-porridge bowl with milk;0,3;1
-porridge bowl with water;0,082;1
-Rice Bag avarage;4;2172
-Rice efficiently produced;2,5;2172
-Rice nefficient production;6,1;2172
-Mackerel;0,5;0
-Orange;0,5;560
-Shellfish;2,6;0
-Shrimp;10,1;0
-Steak;2;15000
-Strawberries;0,6;347
-Strawberries;1,8;347
-Organic Tomatos;0,4;215
-Tomato avarage;9,1;215
-Tomatos;50;214
-Cherry Tomatos;50;215
-Trout;5;0
-Trout fresh;6,9;0
-bottled water;0,4;1
-bottled water;1,04;1
-garlic;0,95;589
-celtic salt;1;300
-cinnamon;1,6;15526
-black cumin;1,6;7,048
-zaatar;1;300
-sage;1,6;7,048
-calendula;1;300
-parsley;0,15;7048
-basil;1,6;322
-mint;1,6;288
-sorrel;1,6;322
-sumac;1,6;300
-ashwagandha;0,4;387
-bay leaves;1,6;300
-ginger;0,4;1657
-harissa;1,6;300
-corriander;1,6;8280
-cayenne pepper;1,6;7365
-chervil;1,6;322
-chili;1,6;7365
-cilantro;0,2;322
-cloves;1,6;61.205
-cumin;1,6;7048
-curry;1,6;7048
-garam masala;1,6;7048
-dandelions;1,6;300
-saffron;1,6;7048
-nettle;1;322
-garden cress;1;322
-tarragon;1,6;7048
-nigella;1;300
-achiote;1;300
-hawaiian salt;1;300
-dill;1,6;300
-lemon balm;1;300
-ginseng;0,4;387
-nutmet;1,6;34319
-thyme;1,6;7048
-oregano;1,6;7048
-mimalayan salt;6;300
-barley grass;1;1423
-wild celery;1;300
-hops;1;300
-peppercorn;2,5;7611
-turmaric;0,4;1657
-hyssop;1;300
-milk thistle;1;300
-anise;1,6;8280
-myrtle;1;300
-savory;1;300
-lemongrass;0,007;322
-cardamon;1,6;34319
-green onions;0,5;272
-sea salt;1;0
-peppermint;1;288
-rosemary;1,6;300
-chamomile;1,6;300
-nutmeg;1;34.319
-Chocolate;;17.196
+﻿null ,0,0
+beef,68.8,15.415
+mutton,64.2,5.301
+goat,64.2,8.763
+offals,35.9,8.763
+coffee,10.1,18.925
+pork,7.9,5.988
+chicken,5.4,4.325
+turkey,5.4,4325
+squid,5.4,0
+octapus,5.4,0
+calamari,5.4,0
+crab,5.4,0
+lobster,5.4,0
+shrimp,5.4,0
+demersal fish,5.4,0
+fish,5.4,0
+seeafood,5.4,0
+cod,5.4,0
+sea bass,5.4,0
+sea beam,5.4,0
+red scarlet,5.4,0
+eggs,4.9,3.265
+olive oil,4.5,14726
+olives,4.5,3015
+seasame seeds,4.2,9371
+seasame oil,4.2,21793
+rice,3.9,2172
+barley,3.8,1423
+beer,3.8,298
+purses,3.8,300
+legumes,3.5,300
+includes alfalfa,3.5,300
+clover,3.5,300
+lupins,3.5,300
+mesquite,3.5,300
+carob,3.5,5594
+tamarind,3.5,300
+beverages,3.5,300
+cocoa beans,3.4,15636
+palm oil,3.3,4971
+purlses,3.3,300
+sunflower oil,3.3,6792
+pomento,3.2,300
+vegetable oil,3.2,300
+rape oil,2.9,300
+mustard oil,2.9,300
+rape seeds,2.9,300
+mustard seeds,2.9,2809
+pepper,2.5,300
+fermented beverages,2.4,300
+cream,2.4,300
+oil crops,2.4,2.364
+coconut oil,2.1,4490
+coconuts,2.1,2687
+soyabeans,2,2145
+cashews,2,14218
+walnuts,2,5293
+nuts,2,9.063
+pinapple,1.9,255
+tea,1.9,300
+milk,1.8,1.02
+butter,1.8,5.553
+ghee,1.8,300
+cereals,1.8,1.644
+soyabean oil,1.8,2145
+plantains,1.6,1602
+spices,1.6,300
+vegetables,,300
+tomatos,1.5,214
+groundnuts,1.4,300
+bananas,1.4,790
+peas,1.2,595
+dates,1.1,2277
+honey,1,0
+oat,1,1788
+rye,1,1544
+wheat,1,1827
+wine,1,300
+fruits,1,967
+ground oil,1,300
+beans,0.8,5053
+grapefruit,0.8,506
+grapes,0.8,608
+apple,0.7,822
+maize,0.7,300
+citrus,0.7,300
+lemons,0.6,642
+limes,0.6,642
+orange,0.6,560
+mandarin,0.6,748
+onion,0.5,272
+maize germ oil,0.4,300
+potato,0.4,287
+starchy roots,0.4,300
+parsnips,0.4,300
+turnips,0.4,195
+jicama,0.4,300
+sugar,0.1,210
+aquatic plants ,0,300
+mollusks,0,300
+local apple,0.55,300
+asparagus,7.6,2150
+local asparagus,0.5,2150
+carrots,0.3,195
+local carrots,0.25,195
+baby carrots ,1,195
+cheese,12,1411
+cod,2.8,0
+cod,3.2,0
+fish general,2.6,0
+fish filleted,6.5,0
+herring,1.3,300
+lamp leg,19,5301
+porridge bowl with milk,0.3,1
+porridge bowl with water,0.082,1
+rice bag avarage,4,2172
+rice efficiently produced,2.5,2172
+rice nefficient production,6.1,2172
+mackerel,0.5,0
+orange,0.5,560
+shellfish,2.6,0
+shrimp,10.1,0
+steak,2,15000
+strawberries,0.6,347
+strawberries,1.8,347
+organic tomatos,0.4,215
+tomato avarage,9.1,215
+tomatos,50,214
+cherry tomatos,50,215
+trout,5,0
+trout fresh,6.9,0
+bottled water,0.4,1
+bottled water,1.04,1
+garlic,0.95,589
+celtic salt,1,300
+cinnamon,1.6,15526
+black cumin,1.6,7.048
+zaatar,1,300
+sage,1.6,7.048
+calendula,1,300
+parsley,0.15,7048
+basil,1.6,322
+mint,1.6,288
+sorrel,1.6,322
+sumac,1.6,300
+ashwagandha,0.4,387
+bay leaves,1.6,300
+ginger,0.4,1657
+harissa,1.6,300
+corriander,1.6,8280
+cayenne pepper,1.6,7365
+chervil,1.6,322
+chili,1.6,7365
+cilantro,0.2,322
+cloves,1.6,61.205
+cumin,1.6,7048
+curry,1.6,7048
+garam masala,1.6,7048
+dandelions,1.6,300
+saffron,1.6,7048
+nettle,1,322
+garden cress,1,322
+tarragon,1.6,7048
+nigella,1,300
+achiote,1,300
+hawaiian salt,1,300
+dill,1.6,300
+lemon balm,1,300
+ginseng,0.4,387
+nutmet,1.6,34319
+thyme,1.6,7048
+oregano,1.6,7048
+mimalayan salt,6,300
+barley grass,1,1423
+wild celery,1,300
+hops,1,300
+peppercorn,2.5,7611
+turmaric,0.4,1657
+hyssop,1,300
+milk thistle,1,300
+anise,1.6,8280
+myrtle,1,300
+savory,1,300
+lemongrass,0.007,322
+cardamon,1.6,34319
+green onions,0.5,272
+sea salt,1,0
+peppermint,1,288
+rosemary,1.6,300
+chamomile,1.6,300
+nutmeg,1,34.319
+chocolate,1,17.196

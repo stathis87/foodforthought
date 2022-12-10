@@ -1,6 +1,6 @@
 // WorkFlow
 let socket;
-let myData = []; 
+let myData = [];
 
 var table, input;
 
@@ -10,6 +10,7 @@ let water = [];
 
 let dots = [];
 let showDots = [];
+let squares = [];
 
 let select, picker;
 let button;
@@ -18,105 +19,77 @@ let remover;
 let img;
 var size = 10;
 
-socket = io();
+socket = io(); 
 
 function preload() {
-  // loadJSON('data.json', function(data) {
-  //   myData = data;
-  // });
-
-  table = loadTable('food.csv', 'csv', 'header');
-
-  //img = loadImage("fruit.jpg");
-  //img = loadImage("fruit-v2.jpg");
-  // img = loadImage("kiko.jpg");
-  //img = loadImage("friedchicken.jpg");
-  img = loadImage("fruit-v3.jpg");
-  
-  
+  table = loadTable("food.csv", "csv", "header");
+  img = loadImage("fruit-v3.jpg"); // for other image replace the jpg
 }
 
-
-
 function setup() {
+  //Comment the window hight and width for having image width and height
   //createCanvas(img.width, img.height);
   createCanvas(windowWidth, windowHeight);
 
-  // print(table.get(1, 0));
+  //receiving the ingredients from the server
+  socket.on("ingredient", newMsg);
 
-  //socket = io.connect('http://localhost:5500')
-  socket.on('ingredient', newMsg);
-
-
-  // select = createSelect();
-  // button = createButton("insert");
-
-  // for (let i = 0; i < table.getRowCount(); i++) {
-  //   select.option(table.get(i, 0));
-  //   // ingredients.push(myData[i][1]);
-  //   carbon.push(table.get(i, 1));
-  //   water.push(table.get(i, 2));
-  // }
-
-  function newMsg(data) {
-    // console.log(data);
-  //  input = String(data).toLowerCase();
-  input = String(data).toLowerCase();
-    print(String(data).toLowerCase());
- 
-  //  print(input.toLowerCase());
+  for (let i = 0; i < table.getRowCount(); i++) {
+    // ingredients.push(myData[i][1]);
+    carbon.push(table.get(i, 1));
+    water.push(table.get(i, 2));
   }
 
-  // print(String(input).toLowerCase());
-  // input.changed(selector());
-  
+  //receiving data from the index.html and make them case senditive
+  function newMsg(data) {
+    input = String(data).toLowerCase();
+    print(String(data).toLowerCase());
+  }
 
   image(img, 0, 0, img.width, img.height);
+  //image(img, 0, 0, 1776, 1184);
   loadPixels();
   noStroke();
-  background(0);
+  //console.log(img.width,img.height); fruit-v3 size is (1776, 1184)
 
-
-  
-  for(var x = 0; x < width; x += size) {
-    for(var y = 0; y < height; y += size) {
+  for (var x = 0; x < width; x += size) {
+    for (var y = 0; y < height; y += size) {
       let d = new dot(x, y);
       dots.push(d);
     }
   }
-
 }
-
-
 
 function draw() {
-  background(0);
-  // button.mousePressed(sChanged);
-
- 
-  let randomPicker = random(dots);
- 
-  showDots.push(randomPicker);
-  for (i = showDots.length - 1; i >= 0; i--) {
-    showDots[i].draw();
-    showDots[i].animate();
+  background(255);
+  for (i = dots.length - 1; i >= 0; i--) {
+    dots[i].setupshow();
+    dots[i].draw();
   }
 
+  for (i = squares.length - 1; i >= 0; i--) {
+    squares[i].animate();
+    squares[i].draw();
+  }
   selector();
-  // print(input);
 }
 
-
 class dot {
-  constructor(x ,y) {
+  constructor(x, y, d) {
     this.x = x;
     this.y = y;
-    this.index = (x + (y * width)) * 4;
+    this.index = (x + y * width) * 4;
 
-    this.r = pixels[this.index];
-    this.g = pixels[this.index+1];
-    this.b = pixels[this.index+2];
-    this.a = 0;
+    this.show = d;
+
+    this.r = 0;
+    this.g = 0;
+    this.b = 0;
+
+    this.rEnd = pixels[this.index];
+    this.gEnd = pixels[this.index + 1];
+    this.bEnd = pixels[this.index + 2];
+    this.a = 255;
 
     this.col = color(this.r, this.g, this.b, this.a);
     this.light = lightness(this.col);
@@ -126,84 +99,60 @@ class dot {
 
   draw() {
     fill(this.r, this.g, this.b, this.a);
-    // ellipse(this.x, this.y, this.radius);
     rect(this.x, this.y, size);
   }
 
   animate() {
-    this.a = lerp(this.a, pixels[this.index], this.fade);
-  }
-}
+    // this.a = lerp(this.a, pixels[this.index], this.fade);
 
-function sChanged() {
-  // picker = carbon[ingredients.indexOf(select.value())] + water[ingredients.indexOf(select.value())];
-  // picker = 1;
-  
-
-  for (let i = 0; i < picker; i++) {
-    let randomRemover = random(showDots);
-    let d = new dot(randomRemover.x, randomRemover.y);
-    showDots.splice(randomRemover, 1);
-
-    showDots.push(d);
+    this.r = lerp(this.r, this.rEnd, this.fade);
+    this.g = lerp(this.g, this.gEnd, this.fade);
+    this.b = lerp(this.b, this.bEnd, this.fade);
   }
 
-
-
-  // picker = carbon[2];
-  // picker = myData[2][3];
-
-}
-
-function selectChanged() {
-  switch (select.value()) {
-    case "Beef":
-      circle(10, 10, 10);
-      break;
-    case "Coffee":
-      text("serif");
-      break;
-    case "Pork":
-      text("fantasy");
-      break;
-    case "Chicken":
-      text("fantasy");
-      break;
-    case "Eggs":
-      text("fantasy");
-      break;
+  setupshow() {
+    this.r = this.rEnd;
+    this.g = this.gEnd;
+    this.b = this.bEnd;
   }
-
 }
-
 
 function selector() {
-  picker = 0;
-  
-
- 
+  // picker = 0;
   for (let i = 0; i < table.getRowCount(); i++) {
     let checker = table.get(i, 0).toString().toLowerCase();
-    // print(seer);
-    if (input == checker) {
-      
-      picker = round(table.get(i, 1)) + round(table.get(i, 2));
-      
 
+    if (input == checker) {
+      picker = round(table.get(i, 1)) + round(table.get(i, 2));
       for (let i = 0; i <= picker; i++) {
-        let randomRemover = random(showDots);
-        let d = new dot(randomRemover.x, randomRemover.y);
-        showDots.splice(randomRemover, 1);
-    
-        showDots.push(d);
-        
+        let randomPicker = random(dots);
+        //  fill(0);
+        let s = new Square(randomPicker.x, randomPicker.y);
+        squares.push(s);
+        //  square(randomPicker.x, randomPicker.y, size);
+        //   showDots.push(randomPicker);
+        //  print(showDots.length);
       }
-      print(picker);
-      picker = 0;
-      input = null;
-    } 
-    
+    }
+
+    picker = 0;
+  }
+  input = "null";
+}
+
+class Square {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.a = 255;
   }
 
+  draw() {
+    fill(0, 0, 0, this.a);
+    square(this.x, this.y, size);
+  }
 
+  animate() {
+    this.a = lerp(this.a, 0, 0.005);
+  }
 }

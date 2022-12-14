@@ -23,7 +23,7 @@ socket = io();
 
 function preload() {
   table = loadTable("food.csv", "csv", "header");
-  img = loadImage("fruit-v4.jpg"); // for other image replace the jpg
+  img = loadImage("fruit-v5.jpg"); // for other image replace the jpg
 }
 
 function setup() {
@@ -123,7 +123,7 @@ function selector() {
     let checker = table.get(i, 0).toString().toLowerCase();
 
     if (input == checker) {
-      picker = round(table.get(i, 1)) + round(table.get(i, 2));
+      picker = round(table.get(i, 1))*100 + round(table.get(i, 2))/10;
       for (let i = 0; i <= picker; i++) {
         let randomPicker = random(dots);
         //  fill(0);

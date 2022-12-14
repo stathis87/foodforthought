@@ -31,7 +31,7 @@ function preload() {
   //img = loadImage("fruit-v2.jpg");
   // img = loadImage("kiko.jpg");
   //img = loadImage("friedchicken.jpg");
-  img = loadImage("fruit-v3.jpg");
+  img = loadImage("fruit-v5.jpg");
   
   
 }

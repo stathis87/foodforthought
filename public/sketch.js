@@ -23,7 +23,7 @@ socket = io();
 
 function preload() {
   table = loadTable("food.csv", "csv", "header");
-  img = loadImage("fruit-v3.jpg"); // for other image replace the jpg
+  img = loadImage("fruit-v4.jpg"); // for other image replace the jpg
 }
 
 function setup() {

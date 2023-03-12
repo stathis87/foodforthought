@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 //we are adding the server name we want our app to look for 
-const server = app.listen(5500);
+const server = app.listen(9100);
 const socket = require('socket.io');
 //we are hosting the static files in public directory
 app.use(express.static('public'));
